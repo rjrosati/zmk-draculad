@@ -15,6 +15,13 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ENTER>;
+            layers = <0 1>;
+        };
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&col_semi>;
+            layers = <0 1>;
         };
     };
 };
