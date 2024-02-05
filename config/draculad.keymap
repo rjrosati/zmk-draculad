@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LONG_PRESS";
             bindings = <&kp>, <&kp>;
-
+hmr RIGHT_WIN
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
@@ -106,7 +106,7 @@
             label = "Colemak";
             bindings = <
 &kp Q              &kp W              &kp F                 &kp P                &kp B                      &kp J           &kp L                    &kp U                  &kp Y               &kp SINGLE_QUOTE
-&hml LEFT_WIN A    &hml LEFT_SHIFT R  &hml LEFT_ALT S       &hml LEFT_CONTROL T  &kp G                      &kp M           &hmr RIGHT_CONTROL N     &hmr RIGHT_ALT E       &hmr RIGHT_SHIFT I  &kp O           
+&hml LEFT_WIN A    &hml LEFT_SHIFT R  &hml LEFT_ALT S       &hml LEFT_CONTROL T  &kp G                      &kp M           &hmr RIGHT_CONTROL N     &hmr RIGHT_ALT E       &hmr RIGHT_SHIFT I  &hmr RIGHT_WIN O           
 &lp LC(Z) Z        &lp LC(X) X        &lp LC(C) C           &lp LC(V) D          &kp V     &none    &none   &kp K           &kp H                    &kp COMMA              &kp PERIOD          &ques_slash     
                                                               &lt 6 ESC             &lt 5 BACKSPACE      &mo_ss 4 LSHIFT            &lt 5 RET       &lt 3 SPACE              &kp TAB
             >;
