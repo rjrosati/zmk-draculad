@@ -11,12 +11,14 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         combo_enter {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ENTER>;
-            layers = <0 1>;
+            layers = <0 1 7>;
         };
+
         combo_colon {
             timeout-ms = <50>;
             key-positions = <29 30>;
@@ -35,7 +37,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-//            hold-trigger-key-positions = <39 40 41 30 18 6 7 19 31 32 20 8 9 21 33 34 22 10 11 23 35 2 14 13 37 38 15 16>;
+
+            //            hold-trigger-key-positions = <39 40 41 30 18 6 7 19 31 32 20 8 9 21 33 34 22 10 11 23 35 2 14 13 37 38 15 16>;
+
             flavor = "tap-preferred";
             require-prior-idle-ms = <300>;
         };
@@ -47,7 +51,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-//            hold-trigger-key-positions = <12 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 20 19 21>;
+
+            //            hold-trigger-key-positions = <12 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 20 19 21>;
+
             flavor = "tap-preferred";
             require-prior-idle-ms = <300>;
         };
@@ -56,6 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LONG_PRESS";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
@@ -67,7 +74,6 @@
             label = "sticky_key_quick_release";
             #binding-cells = <1>;
             bindings = <&kp>;
-
             release-after-ms = <1000>;
             quick-release;
             ignore-modifiers;
@@ -87,6 +93,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMI>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -94,6 +101,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp SLASH>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -104,64 +112,88 @@
         default_layer {
             label = "Colemak";
             bindings = <
-&kp Q              &kp W              &kp F                 &kp P                &kp B                      &kp J           &kp L                    &kp U                  &kp Y               &kp SINGLE_QUOTE
-&hml LEFT_WIN A    &hml LEFT_SHIFT R  &hml LEFT_ALT S       &hml LEFT_CONTROL T  &kp G                      &kp M           &hmr RIGHT_CONTROL N     &hmr RIGHT_ALT E       &hmr RIGHT_SHIFT I  &hmr LEFT_WIN O           
-&lp LC(Z) Z        &lp LC(X) X        &lp LC(C) C           &lp LC(V) D          &kp V     &none    &none   &kp K           &kp H                    &kp COMMA              &kp PERIOD          &ques_slash     
-                                                              &lt 6 ESC             &lt 5 BACKSPACE      &mo_ss 4 LSHIFT            &lt 5 RET       &lt 3 SPACE              &kp TAB
+&kp Q            &kp W              &kp F            &kp P                &kp B                                          &kp J        &kp L                 &kp U             &kp Y               &kp SINGLE_QUOTE
+&hml LEFT_WIN A  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                                          &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr RIGHT_SHIFT I  &hmr LEFT_WIN O
+&lp LC(Z) Z      &lp LC(X) X        &lp LC(C) C      &lp LC(V) D          &kp V            &none              &none      &kp K        &kp H                 &kp COMMA         &kp PERIOD          &ques_slash
+                                                     &lt 6 ESC            &lt 5 BACKSPACE  &mo_ss 4 LSHIFT    &lt 5 RET  &lt 3 SPACE  &kp TAB
             >;
         };
+
         qwerty {
             label = "QWERTYvim";
             bindings = <
-&kp Q             &kp W               &kp E                 &kp R                &kp T                      &kp Y           &kp U                    &kp I                  &kp O               &kp P           
-&kp A             &kp S               &kp D                 &kp F                &kp G                      &kp H           &kp J                    &kp K                  &kp L               &kp SINGLE_QUOTE
-&kp Z             &kp X               &kp C                 &kp V                &kp B    &none    &none   &kp N           &kp M                    &kp COMMA              &kp DOT             &ques_slash     
-                                                              &lt 6 ESC             &lt 5 BACKSPACE      &mo_ss 4 LSHIFT            &lt 5 RET       &lt 3 SPACE              &kp TAB
+&kp Q  &kp W  &kp E  &kp R      &kp T                                          &kp Y        &kp U    &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G                                          &kp H        &kp J    &kp K      &kp L    &kp SINGLE_QUOTE
+&kp Z  &kp X  &kp C  &kp V      &kp B            &none              &none      &kp N        &kp M    &kp COMMA  &kp DOT  &ques_slash
+                     &lt 6 ESC  &lt 5 BACKSPACE  &mo_ss 4 LSHIFT    &lt 5 RET  &lt 3 SPACE  &kp TAB
             >;
         };
+
         colemak_alpha {
             label = "ColeAlph";
             bindings = <
-&kp Q              &kp W              &kp F                 &kp P                &kp B                      &kp J           &kp L                    &kp U                   &kp Y               &kp SINGLE_QUOTE
-&kp A              &kp R              &kp S                 &kp T                &kp G                      &kp M           &kp N                    &kp E                   &kp I               &kp O           
-&kp Z              &kp X              &kp C                 &kp D                &kp V     &none    &none   &kp K           &kp H                    &kp COMMA               &kp PERIOD          &ques_slash     
-                                                              &key_repeat           &kp BACKSPACE        &skq LSHIFT                &kp RET         &kp SPACE                &kp TAB
+&kp Q  &kp W  &kp F  &kp P        &kp B                                  &kp J      &kp L    &kp U      &kp Y       &kp SINGLE_QUOTE
+&kp A  &kp R  &kp S  &kp T        &kp G                                  &kp M      &kp N    &kp E      &kp I       &kp O
+&kp Z  &kp X  &kp C  &kp D        &kp V          &none          &none    &kp K      &kp H    &kp COMMA  &kp PERIOD  &ques_slash
+                     &key_repeat  &kp BACKSPACE  &skq LSHIFT    &kp RET  &kp SPACE  &kp TAB
             >;
         };
+
         arrows_layer {
             label = "Arrows";
             bindings = <
-&bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3         &bt BT_SEL 4               &none           &kp C_VOLUME_DOWN        &kp C_VOLUME_UP        &kp C_MUTE         &none
-&kp LEFT_WIN        &kp LEFT_SHIFT    &kp LEFT_ALT          &kp LEFT_CONTROL     &none                      &kp LEFT_ARROW  &kp DOWN_ARROW           &kp UP_ARROW           &kp RIGHT_ARROW    &none
-&bt BT_CLR          &none             &none                 &none                &none    &none    &none    &kp C_PREVIOUS  &none                    &kp C_PLAY_PAUSE       &kp C_NEXT         &none
-                                                              &none                 &none                &none                      &none           &none                    &none 
+&bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4                  &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp C_MUTE       &none
+&kp LEFT_WIN  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &none                         &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW      &kp RIGHT_ARROW  &none
+&bt BT_CLR    &none           &none         &none             &none         &none    &none  &kp C_PREVIOUS  &none              &kp C_PLAY_PAUSE  &kp C_NEXT       &none
+                                            &none             &none         &none    &none  &none           &none
             >;
         };
+
         numpad_layer {
             label = "NumPad";
             bindings = <
-&none               &none             &none                &none                 &none                     &none           &kp N7                    &kp N8                 &kp N9             &kp MINUS
-&kp LEFT_WIN        &kp LEFT_SHIFT    &kp LEFT_ALT         &kp LEFT_CONTROL      &kp TAB                   &kp ASTERISK    &kp N4                    &kp N5                 &kp N6             &kp PLUS 
-&none               &none             &none                &kp RET               &kp ESC  &none    &none    &none           &kp N1                    &kp N2                 &lp PERIOD N3      &kp SLASH
-                                                              &none                &none                 &none                     &none           &kp SPACE                 &kp KP_NUMBER_0
+&none         &none           &none         &none             &none                    &none         &kp N7           &kp N8  &kp N9         &kp MINUS
+&kp LEFT_WIN  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp TAB                  &kp ASTERISK  &kp N4           &kp N5  &kp N6         &kp PLUS
+&none         &none           &none         &kp RET           &kp ESC  &none    &none  &none         &kp N1           &kp N2  &lp PERIOD N3  &kp SLASH
+                                            &none             &none    &none    &none  &kp SPACE     &kp KP_NUMBER_0
             >;
         };
+
         symbols {
             label = "Symbols";
             bindings = <
-&none               &kp GRAVE         &kp TILDE            &kp SLASH             &kp CARET                 &kp AMPERSAND   &kp LEFT_BRACE            &kp RIGHT_BRACE        &kp MINUS           &kp PLUS        
-&kp EXCLAMATION     &kp AT_SIGN       &kp POUND            &kp DOLLAR            &kp PERCENT               &kp ASTERISK    &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &kp UNDERSCORE      &kp EQUAL       
-&none               &none             &none                &kp BACKSLASH         &none     &none    &none  &none           &kp LEFT_BRACKET          &kp RIGHT_BRACKET      &kp LESS_THAN       &kp GREATER_THAN
-                                                              &none                &none                 &none                     &none           &kp SPACE                 &none 
+&none            &kp GRAVE    &kp TILDE  &kp SLASH      &kp CARET                    &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS       &kp PLUS
+&kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR     &kp PERCENT                  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp EQUAL
+&none            &none        &none      &kp BACKSLASH  &none        &none    &none  &none          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN   &kp GREATER_THAN
+                                         &none          &none        &none    &none  &kp SPACE      &none
             >;
         };
+
         shortcut {
             label = "Shortcuts";
             bindings = <
-&kp LC(GRAVE)          &kp LC(W)         &kp LC(LS(TAB))      &kp LC(TAB)          &kp LC(LS(T))              &none           &none                     &none                  &none               &none
-&kp LG(GRAVE)          &none             &kp LG(LS(TAB))      &kp LG(TAB)          &kp LC(PLUS)               &none           &none                     &none                  &none               &none
-&kp LC(Z)              &kp LC(X)         &kp LC(C)            &kp LC(V)            &kp LC(MINUS)  &none    &none &none           &none                     &none                  &none               &none
-                                                              &none                &none                &none                      &none           &none                     &none
+&kp LC(GRAVE)  &kp LC(W)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(LS(T))                  &none  &none  &none  &none  &none
+&kp LG(GRAVE)  &none      &kp LG(LS(TAB))  &kp LG(TAB)  &kp LC(PLUS)                   &none  &none  &none  &none  &none
+&kp LC(Z)      &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(MINUS)  &none    &none  &none  &none  &none  &none  &none
+                                           &none        &none          &none    &none  &none  &none
+            >;
+        };
+
+        cmak1hand {
+            bindings = <
+&kp Q  &kp W  &kp F  &kp P          &kp B                            &none  &none  &none  &none  &to 0
+&kp A  &kp R  &kp S  &kp T          &kp G                            &none  &none  &none  &none  &none
+&kp Z  &kp X  &kp C  &kp D          &kp V        &none        &none  &none  &none  &none  &none  &none
+                     &kp BACKSPACE  &lt 7 SPACE  &kp ENTER    &none  &none  &none
+            >;
+        };
+
+        cmak1handmirror {
+            bindings = <
+&kp APOS  &kp Y    &kp U      &kp L  &kp J                  &none  &none  &none  &none  &none
+&kp O     &kp I    &kp E      &kp N  &kp M                  &none  &none  &none  &none  &none
+&kp FSLH  &kp DOT  &kp COMMA  &kp H  &kp K  &none    &none  &none  &none  &none  &none  &none
+                              &none  &none  &none    &none  &none  &none
             >;
         };
     };
