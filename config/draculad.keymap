@@ -30,6 +30,12 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <30 31>;
         };
+
+        toggle1hand {
+            bindings = <&tog 7>;
+            key-positions = <0 1>;
+            layers = <0 7>;
+        };
     };
 };
 
