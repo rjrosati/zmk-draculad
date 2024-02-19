@@ -41,6 +41,11 @@
             bindings = <&kp LS(ENTER)>;
             key-positions = <2 3>;
         };
+
+        canary {
+            bindings = <&tog 9>;
+            key-positions = <5 6>;
+        };
     };
 };
 
@@ -197,19 +202,28 @@
 
         cmak1hand {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P          &kp B                            &none  &none  &none  &none  &to 0
-&kp A  &kp R  &kp S  &kp T          &kp G                            &none  &none  &none  &none  &none
-&kp Z  &kp X  &kp C  &kp D          &kp V        &none        &none  &none  &none  &none  &none  &none
-                     &kp BACKSPACE  &lt 8 SPACE  &kp ENTER    &none  &none  &none
+&kp Q  &kp W  &kp F  &kp P          &kp B                            &kp J        &kp L                &kp U      &kp Y    &kp APOS
+&kp A  &kp R  &kp S  &kp T          &kp G                            &kp M        &kp N                &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D          &kp V        &none        &none  &kp K        &kp H                &kp COMMA  &kp DOT  &kp FSLH
+                     &kp BACKSPACE  &lt 8 SPACE  &kp ENTER    &none  &lt 8 SPACE  &mt ENTER BACKSPACE
             >;
         };
 
         cmak1handmirror {
             bindings = <
-&kp APOS  &kp Y    &kp U      &kp L  &kp J                  &none  &none  &none  &none  &none
-&kp O     &kp I    &kp E      &kp N  &kp M                  &none  &none  &none  &none  &none
-&kp FSLH  &kp DOT  &kp COMMA  &kp H  &kp K  &none    &none  &none  &none  &none  &none  &none
+&kp APOS  &kp Y    &kp U      &kp L  &kp J                  &kp B  &kp P  &kp F  &kp W  &kp Q
+&kp O     &kp I    &kp E      &kp N  &kp M                  &kp G  &kp T  &kp S  &kp R  &kp A
+&kp FSLH  &kp DOT  &kp COMMA  &kp H  &kp K  &none    &none  &kp V  &kp D  &kp C  &kp X  &kp Z
                               &none  &none  &none    &none  &none  &none
+            >;
+        };
+
+        canary {
+            bindings = <
+&kp W            &kp L              &kp Y            &kp P         &kp B                                           &kp Z        &kp F                 &kp O             &kp U              &kp APOS
+&hml LEFT_WIN C  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LCTRL T  &kp G                                           &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr LEFT_SHIFT I  &hmr RIGHT_GUI A
+&kp Q            &kp J              &kp V            &kp D         &kp K            &trans                 &trans  &kp X        &kp H                 &kp COMMA         &kp DOT            &kp FSLH
+                                                     &lt 6 ESCAPE  &lt 5 BACKSPACE  &mo_ss 4 LEFT_SHIFT    &trans  &lt 3 SPACE  &kp TAB
             >;
         };
     };
