@@ -16,19 +16,20 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ENTER>;
-            layers = <0 1 7>;
+            layers = <0 1 7 9>;
         };
 
         combo_colon {
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&kp COLON>;
-            layers = <0 1>;
+            layers = <0 1 9>;
         };
 
         combo_semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <30 31>;
+            layers = <0 1 9>;
         };
 
         toggle1hand {
@@ -40,11 +41,13 @@
         shift_enter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <2 3>;
+            layers = <0 1 9>;
         };
 
         canary {
             bindings = <&tog 9>;
             key-positions = <5 6>;
+            layers = <0>;
         };
     };
 };
