@@ -47,7 +47,7 @@
         canary {
             bindings = <&tog 9>;
             key-positions = <5 6>;
-            layers = <0>;
+            layers = <0 9>;
         };
     };
 };
