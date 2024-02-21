@@ -223,10 +223,10 @@
 
         canary {
             bindings = <
-&kp W            &kp L              &kp Y            &kp P         &kp B                                       &kp Z            &kp F                 &kp O             &kp U              &kp APOS
-&hml LEFT_WIN C  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LCTRL T  &kp G                                       &kp M            &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr LEFT_SHIFT I  &hmr RIGHT_GUI A
-&kp Q            &kp J              &kp V            &kp D         &kp K        &trans                 &trans  &kp X            &kp H                 &kp COMMA         &kp DOT            &kp FSLH
-                                                     &lt 6 ESCAPE  &lt 5 SPACE  &mo_ss 4 LEFT_SHIFT    &trans  &lt 3 BACKSPACE  &kp TAB
+&kp W            &kp L              &kp Y            &kp P         &kp B                                      &kp Z            &kp F                 &kp O             &kp U              &kp APOS
+&hml LEFT_WIN C  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LCTRL T  &kp G                                      &kp M            &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr LEFT_SHIFT I  &hmr RIGHT_GUI A
+&kp Q            &kp J              &kp V            &kp D         &kp K        &none                  &none  &kp X            &kp H                 &kp COMMA         &kp DOT            &kp FSLH
+                                                     &lt 6 ESCAPE  &lt 5 SPACE  &mo_ss 4 LEFT_SHIFT    &none  &lt 3 BACKSPACE  &kp TAB
             >;
         };
     };
