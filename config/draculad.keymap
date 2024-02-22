@@ -16,20 +16,20 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ENTER>;
-            layers = <0 1 7 9>;
+            layers = <0 1 7 10>;
         };
 
         combo_colon {
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&kp COLON>;
-            layers = <0 1 9>;
+            layers = <0 1 10>;
         };
 
         combo_semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <30 31>;
-            layers = <0 1 9>;
+            layers = <0 1 10>;
         };
 
         toggle1hand {
@@ -41,13 +41,19 @@
         shift_enter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <2 3>;
-            layers = <0 1 9>;
+            layers = <0 1 10>;
         };
 
         canary {
-            bindings = <&tog 9>;
+            bindings = <&tog 10>;
             key-positions = <5 6>;
-            layers = <0 9>;
+            layers = <0 10>;
+        };
+
+        enter_right_hand {
+            bindings = <&kp ENTER>;
+            key-positions = <7 8>;
+            layers = <7>;
         };
     };
 };
@@ -205,10 +211,10 @@
 
         cmak1hand {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P          &kp B                            &kp J        &kp L                &kp U      &kp Y    &kp APOS
-&kp A  &kp R  &kp S  &kp T          &kp G                            &kp M        &kp N                &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D          &kp V        &none        &none  &kp K        &kp H                &kp COMMA  &kp DOT  &kp FSLH
-                     &kp BACKSPACE  &lt 8 SPACE  &kp ENTER    &none  &lt 8 SPACE  &mt ENTER BACKSPACE
+&kp Q            &kp W                &kp F            &kp P                &kp B                              &kp J        &kp L            &kp U             &kp Y    &kp APOS
+&hml LEFT_GUI A  &hml LEFT_CONTROL R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                              &kp M        &kp N            &hmr RIGHT_ALT E  &kp I    &kp O
+&kp Z            &kp X                &kp C            &kp D                &kp V        &none          &none  &kp K        &kp H            &kp COMMA         &kp DOT  &kp FSLH
+                                                       &lt 9 BACKSPACE      &lt 8 SPACE  &lt 9 ENTER    &none  &lt 8 SPACE  &lt 9 BACKSPACE
             >;
         };
 
@@ -218,6 +224,15 @@
 &kp O     &kp I    &kp E      &kp N  &kp M                  &kp G  &kp T  &kp S  &kp R  &kp A
 &kp FSLH  &kp DOT  &kp COMMA  &kp H  &kp K  &none    &none  &kp V  &kp D  &kp C  &kp X  &kp Z
                               &none  &none  &none    &none  &none  &none
+            >;
+        };
+
+        arrows_shortcuts_1hand {
+            bindings = <
+&kp LC(Z)  &mt LC(X) K_MUTE  &mt LC(C) C_VOLUME_UP  &mt LC(V) C_VOL_DN  &none                      &none           &mt LC(V) C_VOL_DN  &mt LC(C) C_VOL_UP  &mt LC(X) K_MUTE  &kp LC(Z)
+&none      &kp LEFT_ARROW    &kp UP_ARROW           &kp DOWN            &kp RIGHT                  &kp LEFT_ARROW  &kp DOWN            &kp UP              &kp RIGHT         &none
+&kp LG(Z)  &kp LG(X)         &kp LG(C)              &kp LG(V)           &none      &none    &none  &none           &kp LG(V)           &kp LG(C)           &kp LG(X)         &kp LG(Z)
+                                                    &none               &none      &none    &none  &none           &none
             >;
         };
 
