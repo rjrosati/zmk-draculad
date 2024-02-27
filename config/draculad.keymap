@@ -16,20 +16,20 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ENTER>;
-            layers = <0 1 7 10>;
+            layers = <0 1 7 12>;
         };
 
         combo_colon {
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&kp COLON>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         combo_semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <30 31>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         toggle1hand {
@@ -41,13 +41,13 @@
         shift_enter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <2 3>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         canary {
-            bindings = <&tog 10>;
+            bindings = <&tog 12>;
             key-positions = <5 6>;
-            layers = <0 10>;
+            layers = <0 12>;
         };
 
         enter_right_hand {
@@ -211,10 +211,10 @@
 
         cmak1hand {
             bindings = <
-&kp Q            &kp W                &kp F            &kp P                &kp B                          &kp J        &kp L            &kp U             &kp Y    &kp APOS
-&hml LEFT_GUI A  &hml LEFT_CONTROL R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                          &kp M        &kp N            &hmr RIGHT_ALT E  &kp I    &kp O
-&kp Z            &kp X                &kp C            &kp D                &kp V        &none      &none  &kp K        &kp H            &kp COMMA         &kp DOT  &kp FSLH
-                                                       &lt 9 BACKSPACE      &lt 8 SPACE  &kp TAB    &none  &lt 8 SPACE  &lt 9 BACKSPACE
+&kp Q            &kp W                &kp F            &kp P                &kp B                             &kp J        &kp L            &kp U             &kp Y    &kp APOS
+&hml LEFT_GUI A  &hml LEFT_CONTROL R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                             &kp M        &kp N            &hmr RIGHT_ALT E  &kp I    &kp O
+&kp Z            &kp X                &kp C            &kp D                &kp V        &none         &none  &kp K        &kp H            &kp COMMA         &kp DOT  &kp FSLH
+                                                       &lt 9 BACKSPACE      &lt 8 SPACE  &lt 10 TAB    &none  &lt 8 SPACE  &lt 9 BACKSPACE
             >;
         };
 
@@ -233,6 +233,24 @@
 &none      &kp LEFT_ARROW    &kp UP_ARROW           &kp DOWN            &kp RIGHT                  &kp LEFT_ARROW  &kp DOWN            &kp UP              &kp RIGHT         &none
 &kp LG(Z)  &kp LG(X)         &kp LG(C)              &kp LG(V)           &none      &none    &none  &none           &kp LG(V)           &kp LG(C)           &kp LG(X)         &kp LG(Z)
                                                     &none               &none      &none    &none  &none           &none
+            >;
+        };
+
+        symbols_1hand {
+            bindings = <
+&none            &kp GRAVE    &kp TILDE  &kp FSLH    &kp CARET                    &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS       &kp PLUS
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp EQUAL
+&none            &none        &none      &kp BSLH    &none        &none    &none  &none          &kp LBKT              &kp RBKT               &kp LESS_THAN   &kp GREATER_THAN
+                                         &none       &mo 11       &none    &none  &none          &none
+            >;
+        };
+
+        symbols_1hand_mirror {
+            bindings = <
+&kp PLUS          &kp MINUS       &kp RIGHT_BRACE        &kp LEFT_BRACE        &kp AMPERSAND                    &kp CARET    &kp SLASH             &kp TILDE  &kp GRAVE    &trans
+&kp EQUAL         &kp UNDERSCORE  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp ASTERISK                     &kp PERCENT  &kp DOLLAR            &kp HASH   &kp AT_SIGN  &kp EXCLAMATION
+&kp GREATER_THAN  &kp LESS_THAN   &kp RIGHT_BRACKET      &kp LEFT_BRACKET      &trans         &trans    &trans  &trans       &kp NON_US_BACKSLASH  &trans     &trans       &trans
+                                                         &trans                &trans         &trans    &trans  &trans       &trans
             >;
         };
 
