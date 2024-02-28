@@ -55,6 +55,12 @@
             key-positions = <7 8>;
             layers = <7>;
         };
+
+        toggle_qwerty {
+            bindings = <&tog 1>;
+            key-positions = <3 4>;
+            layers = <0 1>;
+        };
     };
 };
 
