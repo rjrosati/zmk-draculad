@@ -217,10 +217,10 @@
 
         cmak1hand {
             bindings = <
-&kp Q            &kp W                &kp F            &kp P                &kp B                             &kp J        &kp L            &kp U             &kp Y    &kp APOS
-&hml LEFT_GUI A  &hml LEFT_CONTROL R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                             &kp M        &kp N            &hmr RIGHT_ALT E  &kp I    &kp O
-&kp Z            &kp X                &kp C            &kp D                &kp V        &none         &none  &kp K        &kp H            &kp COMMA         &kp DOT  &kp FSLH
-                                                       &lt 9 BACKSPACE      &lt 8 SPACE  &lt 10 TAB    &none  &lt 8 SPACE  &lt 9 BACKSPACE
+&kp Q            &kp W                &kp F            &kp P                &kp B                                       &kp J        &kp L            &kp U             &kp Y    &kp APOS
+&hml LEFT_GUI A  &hml LEFT_CONTROL R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &mt TAB G                                   &kp M        &kp N            &hmr RIGHT_ALT E  &kp I    &kp O
+&kp Z            &kp X                &kp C            &kp D                &kp V        &none                   &none  &kp K        &kp H            &kp COMMA         &kp DOT  &kp FSLH
+                                                       &lt 9 BACKSPACE      &lt 8 SPACE  &mo_ss 10 LEFT_SHIFT    &none  &lt 8 SPACE  &lt 9 BACKSPACE
             >;
         };
 
