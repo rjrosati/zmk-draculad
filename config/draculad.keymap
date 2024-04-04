@@ -246,7 +246,7 @@
             bindings = <
 &none            &kp GRAVE    &kp TILDE  &kp FSLH    &kp CARET                    &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS       &kp PLUS
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp EQUAL
-&none            &none        &none      &kp BSLH    &none        &none    &none  &none          &kp LBKT              &kp RBKT               &kp LESS_THAN   &kp GREATER_THAN
+&none            &none        &none      &kp BSLH    &kp PIPE     &none    &none  &none          &kp LBKT              &kp RBKT               &kp LESS_THAN   &kp GREATER_THAN
                                          &none       &mo 11       &none    &none  &none          &none
             >;
         };
