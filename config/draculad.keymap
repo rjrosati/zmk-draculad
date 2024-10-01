@@ -70,10 +70,10 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
-                <&macro_press &kp LEFT_GUI>,
                 <&macro_param_1to1>,
-                <&macro_tap MACRO_PLACEHOLDER>,
-                <&macro_release &kp LEFT_GUI>;
+                <&kp MACRO_PLACEHOLDER>;
+                //<&macro_tap MACRO_PLACEHOLDER>,
+                //<&macro_release &kp LEFT_GUI>;
         };
     };
 };
