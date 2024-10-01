@@ -65,6 +65,16 @@
 };
 
 / {
+    macros {
+        OM: OM {
+            compatible = "zmk, behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1>, <&kp LG(MACRO_PLACEHOLDER)>
+        };
+    };
+};
+
+/ {
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
@@ -150,7 +160,7 @@
             bindings = <
 &kp Q            &kp W              &kp F            &kp P                &kp B                                          &kp J        &kp L                 &kp U             &kp Y               &kp SINGLE_QUOTE
 &hml LEFT_WIN A  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                                          &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr RIGHT_SHIFT I  &hmr LEFT_WIN O
-&lp LC(Z) Z      &lp LC(X) X        &lp LC(C) C      &lp LC(V) D          &kp V            &none              &none      &kp K        &kp H                 &kp COMMA         &kp PERIOD          &kp SLASH
+&lp LC(Z) Z      &lp OM(X) X        &lp LC(C) C      &lp LC(V) D          &kp V            &none              &none      &kp K        &kp H                 &kp COMMA         &kp PERIOD          &kp SLASH
                                                      &lt 6 ESC            &lt 5 BACKSPACE  &mo_ss 4 LSHIFT    &lt 5 RET  &lt 3 SPACE  &kp TAB
             >;
         };
