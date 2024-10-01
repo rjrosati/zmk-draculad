@@ -220,7 +220,7 @@
             bindings = <
 &kp LC(GRAVE)  &kp LC(W)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(LS(T))                  &none  &none  &none  &none  &none
 &kp LG(GRAVE)  &none      &kp LG(LS(TAB))  &kp LG(TAB)  &kp LC(PLUS)                   &none  &none  &none  &none  &none
-&kp LC(Z)      &om X      &kp LC(C)        &kp LC(V)    &kp LC(MINUS)  &none    &none  &none  &none  &none  &none  &none
+&kp LC(Z)      &OM X      &kp LC(C)        &kp LC(V)    &kp LC(MINUS)  &none    &none  &none  &none  &none  &none  &none
                                            &none        &none          &none    &none  &none  &none
             >;
         };
