@@ -67,7 +67,7 @@
 / {
     macros {
         OM: OM {
-            compatible = "zmk, behavior-macro-one-param";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1>, <&kp LG(MACRO_PLACEHOLDER)>;
         };
