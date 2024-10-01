@@ -160,7 +160,7 @@
             bindings = <
 &kp Q            &kp W              &kp F            &kp P                &kp B                                          &kp J        &kp L                 &kp U             &kp Y               &kp SINGLE_QUOTE
 &hml LEFT_WIN A  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &kp G                                          &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_ALT E  &hmr RIGHT_SHIFT I  &hmr LEFT_WIN O
-&lp LC(Z) Z      &lp &OM X X        &lp LC(C) C      &lp LC(V) D          &kp V            &none              &none      &kp K        &kp H                 &kp COMMA         &kp PERIOD          &kp SLASH
+&lp LC(Z) Z      &lp LC(X)        &lp LC(C) C      &lp LC(V) D          &kp V            &none              &none      &kp K        &kp H                 &kp COMMA         &kp PERIOD          &kp SLASH
                                                      &lt 6 ESC            &lt 5 BACKSPACE  &mo_ss 4 LSHIFT    &lt 5 RET  &lt 3 SPACE  &kp TAB
             >;
         };
@@ -220,7 +220,7 @@
             bindings = <
 &kp LC(GRAVE)  &kp LC(W)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(LS(T))                  &none  &none  &none  &none  &none
 &kp LG(GRAVE)  &none      &kp LG(LS(TAB))  &kp LG(TAB)  &kp LC(PLUS)                   &none  &none  &none  &none  &none
-&kp LC(Z)      &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(MINUS)  &none    &none  &none  &none  &none  &none  &none
+&kp LC(Z)      &om X      &kp LC(C)        &kp LC(V)    &kp LC(MINUS)  &none    &none  &none  &none  &none  &none  &none
                                            &none        &none          &none    &none  &none  &none
             >;
         };
